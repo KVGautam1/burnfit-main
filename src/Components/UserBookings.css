@@ -1,0 +1,96 @@
+/* UserBookings.css */
+
+.user-bookings-body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("fit.jpg"); /* Path to your background image */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+.user-bookings-header {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-bookings-header button {
+  padding: 10px 20px;
+  background-color: rgba(0, 255, 127, 0.7); /* Semi-transparent button color */
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+}
+
+.user-bookings-header button:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white on hover */
+  transform: scale(1.05);
+}
+
+.user-bookings-title {
+  margin: 0;
+}
+
+.user-bookings-main {
+  padding: 20px;
+}
+
+.user-bookings-error-message {
+  color: red;
+  margin-bottom: 20px;
+}
+
+.user-bookings-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-bookings-list-item {
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light transparent border */
+  transition: transform 0.3s ease;
+}
+
+.user-bookings-list-item:hover {
+  transform: scale(1.05);
+}
+
+.user-bookings-list-item .booking-number {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #00FF7F; /* Highlight color for booking number */
+  margin-bottom: 10px;
+}
+
+.user-bookings-list-item p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+@media (max-width: 600px) {
+  .user-bookings-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-bookings-header button {
+    margin-bottom: 10px;
+  }
+}

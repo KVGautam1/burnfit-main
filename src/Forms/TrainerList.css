@@ -1,0 +1,99 @@
+.trainers-list {
+  text-align: center;
+  padding: 20px;
+}
+header {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.back-btn {
+  padding: 10px 20px;
+  background-color: #00FF7F;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px; /* Changed from margin-bottom to margin-top */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: white;
+  transform: scale(1.05);
+}
+
+.trainer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.trainer-card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 10px;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.trainer-card h2 {
+  margin: 10px 0;
+}
+
+.trainer-card p {
+  margin: 5px 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.check-availability-btn, .book-appointment-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.check-availability-btn {
+  background-color: #00FF7F;
+  color: black;
+}
+
+.check-availability-btn:hover {
+  background-color: white;
+  transform: scale(1.05);
+}
+
+.book-appointment-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.book-appointment-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+

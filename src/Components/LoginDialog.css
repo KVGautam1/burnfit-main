@@ -1,0 +1,86 @@
+.login-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.login-dialog-content {
+  background: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: scaleUp 0.3s ease;
+}
+
+.login-dialog-content h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #00FF7F;
+}
+
+.login-dialog-content p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.login-dialog-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.login-dialog-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-dialog-close {
+  background-color: #555;
+  color: white;
+}
+
+.login-dialog-close:hover {
+  background-color: #777;
+  transform: scale(1.05);
+}
+
+.login-dialog-login {
+  background-color: #00FF7F;
+  color: black;
+}
+
+.login-dialog-login:hover {
+  background-color: #00cc66;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}

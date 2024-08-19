@@ -1,0 +1,363 @@
+/* Reset default margin and padding */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Dark theme styles */
+body {
+  background-image: url("fit.jpg"); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-position: center center; /* Center the image horizontally and vertically */
+  background-repeat: no-repeat; /* Prevents repeating of the background image */
+  background-attachment: fixed; /* Keeps the image fixed in place when scrolling */
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+/* Header */
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 0;
+  display: flex;
+  justify-content: center; /* Center-align header content */
+}
+
+nav ul.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: center; /* Center-align menu items */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul.menu li {
+  margin: 0 10px; /* Adjust spacing between items */
+  position: relative;
+}
+
+nav ul.menu li.welcome-text {
+  font-weight: bold; /* Make welcome text bold */
+  margin-right: auto; /* Push the welcome text to the left */
+  margin-left: 0; /* Remove any left margin */
+  flex: 1; /* Allow the welcome text to take available space */
+  text-align: left; /* Align welcome text to the left */
+  text-transform: uppercase; /* Make welcome text uppercase */
+}
+
+nav ul.menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul.menu li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #00FF7F;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav ul.menu li a:hover::after {
+  width: 100%;
+}
+
+nav ul.menu li a:hover {
+  color: white; /* Ensure text color remains white */
+}
+
+.logout-btn, .login-btn {
+  padding: 8px 16px;
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-btn:hover, .login-btn:hover {
+  background-color: #00FF7F;
+  color: black;
+}
+
+/* BMICalculator styles */
+.bmi-container {
+  font-family: Quicksand;
+  font-size: 16px;
+  color: white;
+  background-image: url('fit.jpg'); /* Reference image correctly */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Ensure relative positioning for child elements */
+  min-height: 100vh; /* Ensure the container covers the full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bmi-container h3.st {
+  font-size: 24px; /* Adjust font size if needed */
+  font-weight: 300;
+  text-align: center;
+  color: lightskyblue;
+  position: absolute; /* Position the heading absolutely */
+  top: 20px; /* Adjust top position if needed */
+  z-index: 10; /* Ensure heading is on top */
+}
+
+.bmi-container .form {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 450px;
+  border-radius: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  box-shadow: 0 0 40px 0 white;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative; /* Ensure relative positioning for child elements */
+  z-index: 1; /* Ensure the form is below the heading text */
+}
+
+.bmi-container .form:hover {
+  box-shadow: 0 0 60px 0 whitesmoke;
+  transition: 0.4s;
+  transform: scale(1.02);
+}
+
+.bmi-container .row-one, .bmi-container .row-two {
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.bmi-container .highlight-white {
+  color: white;
+}
+
+.bmi-container .text-input {
+  width: 80%;
+  height: 30px;
+  border-radius: 10px;
+  background-color: white;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: black;
+  margin: 10px 0;
+}
+
+.bmi-container .text-input:hover {
+  background-color: lightblue;
+}
+
+.bmi-container #submit {
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 140px;
+  background-color: gray;
+  color: white;
+  margin: 20px 0;
+  display: block;
+  outline: none;
+  cursor: pointer;
+}
+
+.bmi-container #submit:hover {
+  background-color: #00FF7F;
+  color: black;
+  font-weight: bold;
+}
+
+.bmi-container .text {
+  display: inline-block;
+  margin: 5px 20px 5px 8px;
+  z-index: 2; /* Ensure text appears above the checkmark */
+}
+
+.bmi-container .container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1; /* Ensure the container is above the checkmark */
+}
+
+.bmi-container .container input {
+  position: absolute;
+  opacity: 0;
+}
+
+.bmi-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: lightcyan;
+  border-radius: 50%;
+  z-index: 0; /* Ensure the checkmark is below the text and container */
+}
+
+.bmi-container .container:hover input ~ .checkmark {
+  background-color: lightgray;
+}
+
+.bmi-container .container input:checked ~ .checkmark {
+  background-color: lightgray;
+}
+
+.bmi-container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.bmi-container .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.bmi-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.bmi-container h1 {
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  color: skyblue;
+  padding-top: 15px;
+  display: block;
+  z-index: 2; /* Ensure the heading text appears above the form */
+}
+
+.bmi-container h2 {
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  display: block;
+  z-index: 2; /* Ensure the heading text appears above the form */
+}
+
+.bmi-container .bold {
+  color: lightskyblue;
+  z-index: 2; /* Ensure the bold text appears above the form */
+}
+
+.bmi-container .result {
+  font-size: 18px;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.bmi-container .find-workouts {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-top: 10px; /* Add some margin to separate from the result */
+}
+
+.bmi-container .find-workouts:hover {
+  color: #00FF7F;
+}
+
+.bmi-container label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.bmi-container label input {
+  margin-top: 5px;
+  margin-bottom: 10px; /* Add space between label text and input */
+}
+
+.bmi-container .back-button {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.bmi-container .back-button:hover {
+  color: #00FF7F;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  margin-top: auto; /* Push footer to the bottom */
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.footer-column {
+  margin: 0 10px;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.footer-column a:hover {
+  color: #00FF7F;
+}
+
+.social-links {
+  margin: 10px 0;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #00FF7F;
+}

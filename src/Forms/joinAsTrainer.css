@@ -1,0 +1,78 @@
+.join-trainer-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+.join-trainer-form {
+    width: 100%;
+    max-width: 500px; /* Optional: Control the maximum width of the form */
+}
+
+.join-trainer-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.join-trainer-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.join-trainer-container label {
+    margin-bottom: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Align label and input vertically */
+}
+
+.join-trainer-container input,
+.join-trainer-container select {
+    padding: 10px;
+    margin-top: 5px; /* Space between label and input/select */
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: white;
+    width: 100%; /* Ensure input fields fill available width */
+    max-width: 400px; /* Optional: Set a maximum width for input fields */
+}
+
+.phone-input {
+    display: flex;
+    align-items: center; /* Align the phone input and +91 */
+}
+
+.phone-input span {
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px 0 0 5px;
+}
+
+.phone-input input {
+    border-radius: 0 5px 5px 0; /* Round only the right corners */
+    margin-left: 0; /* Remove margin */
+}
+
+.submit-btn {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #00FF7F;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Center the button horizontally */
+}
+
+.submit-btn:hover {
+    background-color: white;
+    color: black;
+}

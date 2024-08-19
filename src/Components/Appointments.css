@@ -1,0 +1,28 @@
+.appointments {
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  .appointments-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .appointments-table th, .appointments-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .appointments-table th {
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+  

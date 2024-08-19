@@ -1,0 +1,382 @@
+/* Reset default margin and padding */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Dark theme styles */
+body {
+  background-image: url("fit.jpg"); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-position: center center; /* Center the image horizontally and vertically */
+  background-repeat: no-repeat; /* Prevents repeating of the background image */
+  background-attachment: fixed; /* Keeps the image fixed in place when scrolling */
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 0;
+  display: flex;
+  justify-content: center; /* Center-align header content */
+}
+
+nav ul.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: center; /* Center-align menu items */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+nav ul.menu li {
+  margin: 0 10px; /* Adjust spacing between items */
+  position: relative;
+}
+
+nav ul.menu li.welcome-text {
+  font-weight: bold; /* Make welcome text bold */
+  margin-right: auto; /* Push the welcome text to the left */
+  margin-left: 0; /* Remove any left margin */
+  flex: 1; /* Allow the welcome text to take available space */
+  text-align: left; /* Align welcome text to the left */
+  text-transform: uppercase; /* Make welcome text uppercase */
+}
+
+nav ul.menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul.menu li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #00FF7F;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav ul.menu li a:hover::after {
+  width: 100%;
+}
+
+nav ul.menu li a:hover {
+  color: white; /* Ensure text color remains white */
+}
+
+.logout-btn, .login-btn {
+  padding: 8px 16px;
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-btn:hover, .login-btn:hover {
+  background-color: #00FF7F;
+  color: black;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #EBEBEF;
+  animation: fadeInDown 1s;
+}
+
+.hero p {
+  color: aliceblue;
+  animation: fadeInUp 1s;
+}
+
+.hero .cta-button {
+  padding: 10px 20px;
+  background-color: #00FF7F;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulse 1s; /* Adding pulse animation */
+}
+
+.hero .cta-button:hover {
+  background-color: white;
+  transform: scale(1.05);
+}
+
+.state-section {
+  text-align: center;
+  padding: 150px 0; /* Increased padding to make the section taller */
+  background: rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+  opacity: 0; /* Hide elements initially */
+  transform: translateY(50px); /* Shift elements down initially */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
+}
+
+.state-section.visible {
+  opacity: 1; /* Make elements visible */
+  transform: translateY(0); /* Move elements to original position */
+}
+
+.state-section p {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #EBEBEF;
+  font-weight: bold; /* Make text bold */
+  animation: fadeInUp 1s, slideInLeft 1s; /* Adding multiple animations */
+}
+
+.state-section .cta-button {
+  padding: 10px 20px;
+  background-color: #00FF7F;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulse 1s; /* Adding pulse animation */
+}
+
+.state-section .cta-button:hover {
+  background-color: white;
+  transform: scale(1.05);
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.muscle-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: calc(33.33% - 20px);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer; /* Added cursor pointer to indicate clickable area */
+  position: relative; /* For positioning child elements like images */
+  opacity: 0; /* Hide elements initially */
+  transform: translateY(50px); /* Shift elements down initially */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
+}
+
+.muscle-box.visible {
+  opacity: 1; /* Make elements visible */
+  transform: translateY(0); /* Move elements to original position */
+}
+
+.muscle-box img {
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.muscle-box:hover {
+  transform: scale(1.05);
+}
+
+.roll-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.exercise-list {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: white;
+}
+
+.exercise-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.exercise-list ul {
+  list-style-type: disc; /* Adds bullet points */
+  padding-left: 20px; /* Adds space between bullet points and text */
+  line-height: 1.5; /* Adds space between lines */
+}
+
+.exercise-list li {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: white; /* Ensure exercise items are white */
+  transition: color 0.3s ease;
+  line-height: 1.5; /* Adds space between lines */
+}
+
+.exercise-list li:hover {
+  color: #00FF7F; /* Change text color to green on hover */
+}
+
+.no-hover {
+  color: white;
+  transition: none;
+}
+
+.no-hover:hover {
+  color: white; /* Ensures the color stays white on hover */
+}
+
+.no-bullet {
+  list-style-type: none; /* Removes bullet points */
+  line-height: 1.5; /* Adds space between lines */
+}
+
+.back-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #00FF7F;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: white;
+  transform: scale(1.05);
+}
+
+/* Footer styles */
+.footer {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center-align items horizontally */
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 0.9em;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px; /* Add space between columns and social links */
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #00FF7F;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px; /* Adjust the value as needed for spacing */
+}
+
+.social-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em; /* Increase icon size if needed */
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #00FF7F;
+}
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

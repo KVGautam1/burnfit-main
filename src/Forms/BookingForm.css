@@ -1,0 +1,74 @@
+/* BookingForm.css */
+
+/* Ensure styles are specific to booking form and don't affect global styles */
+.booking-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.booking-form-container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.booking-form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.booking-form-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.booking-form-container label {
+    margin-bottom: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-form-container input,
+.booking-form-container select,
+.booking-form-container textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    max-width: 400px;
+}
+
+.booking-form-container textarea {
+    resize: vertical;
+}
+
+.booking-form-submit-btn {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #00FF7F; /* Green background */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
+    align-self: center;
+}
+
+.booking-form-submit-btn:hover {
+    background-color: #008000; /* Darker green background on hover */
+    color: white; /* Change text color to white on hover */
+}
